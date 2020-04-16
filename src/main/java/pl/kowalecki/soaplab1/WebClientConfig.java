@@ -2,10 +2,8 @@ package pl.kowalecki.soaplab1;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
-@Primary
 @Configuration
 public class WebClientConfig {
 

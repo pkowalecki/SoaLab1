@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import pl.kowalecki.soaplab1wsdl.RegisterCallResponse;
 import pl.kowalecki.soaplab1wsdl.ResultsResponse;
 
+
 @SpringBootApplication
 public class Soaplab1Application {
 
@@ -18,9 +19,10 @@ public class Soaplab1Application {
                 student = args[0];
             }
             RegisterCallResponse registerCallResponse = webClient.registerCallResponse(student);
-            System.err.print(registerCallResponse.getExercise().getName());
+            System.out.println(registerCallResponse.getExercise().getName());
+            System.out.println(registerCallResponse.getExercise().getNote());
             ResultsResponse resultsResponse = webClient.getResult(student);
-            System.out.print(resultsResponse.getEntry());
+            System.out.println(resultsResponse.getEntry());
         };
     }
     public static void main(String[] args) {
